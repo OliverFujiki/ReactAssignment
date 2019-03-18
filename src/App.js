@@ -5,6 +5,7 @@ import Header from "./components/title";
 import { Helmet } from "react-helmet";
 import Credentials from "./components/credentials";
 import EmployeeList from "./components/createAndRead";
+import EmployeeForm from "./components/employeeForm";
 
 class App extends Component {
   render() {
@@ -22,7 +23,15 @@ class App extends Component {
               </React.Fragment>
             )}
           />
-          <Route path="/read" render={props => <EmployeeList />} />
+          <Route
+            path="/employees"
+            render={props => (
+              <React.Fragment>
+                <EmployeeForm />
+                <EmployeeList />
+              </React.Fragment>
+            )}
+          />
         </div>
       </Router>
     );

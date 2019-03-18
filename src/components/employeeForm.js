@@ -1,26 +1,43 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
-export class credentials extends Component {
+export class EmployeeForm extends Component {
   render() {
     return (
-      <form style={{ display: "flex" }}>
+      <form
+        style={{ display: "flex" }}
+        action="https://jsonplaceholder.typicode.com/posts"
+        method="post"
+      >
         <input
-          type="email"
-          name="email"
+          type="text"
+          name="userId"
           style={{ flex: "10" }}
-          placeholder="email..."
+          placeholder="name..."
         />
         <input
-          type="password"
-          name="password"
+          type="text"
+          name="title"
           style={{ flex: "10" }}
-          placeholder="password..."
+          placeholder="salary..."
         />
-        <Link style={linkStyle} to="/read">
-          Submit
-        </Link>
+        <input
+          type="text"
+          name="body"
+          style={{ flex: "10" }}
+          placeholder="age..."
+        />
+        <input type="submit" value="Submit" className="btn" style={linkStyle} />
       </form>
     );
   }
 }
+const linkStyle = {
+  display: "inline-block",
+  border: "none",
+  background: "#555",
+  color: "#fff",
+  padding: "7px 20px",
+  cursor: "pointer"
+};
+
+export default EmployeeForm;

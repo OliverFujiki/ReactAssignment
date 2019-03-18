@@ -17,7 +17,7 @@ export class credentials extends Component {
           style={{ flex: "10" }}
           placeholder="password..."
         />
-        <Link style={linkStyle} to="/read">
+        <Link style={linkStyle} to="/employees">
           Submit
         </Link>
       </form>
