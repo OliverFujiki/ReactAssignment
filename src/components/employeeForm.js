@@ -24,12 +24,3 @@ export class credentials extends Component {
     );
   }
 }
-const linkStyle = {
-  display: "inline-block",
-  border: "none",
-  background: "#555",
-  color: "#fff",
-  padding: "7px 20px",
-  cursor: "pointer"
-};
-export default credentials;

@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/title";
 import { Helmet } from "react-helmet";
 import Credentials from "./components/credentials";
-import Read from "./components/createAndRead";
+import EmployeeList from "./components/createAndRead";
 
 class App extends Component {
   render() {
@@ -22,7 +22,7 @@ class App extends Component {
               </React.Fragment>
             )}
           />
-          <Route path="/read" component={Read} />
+          <Route path="/read" render={props => <EmployeeList />} />
         </div>
       </Router>
     );
