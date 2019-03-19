@@ -6,7 +6,7 @@ class EmployeeList extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      employees: []
     };
   }
 
@@ -17,7 +17,7 @@ class EmployeeList extends React.Component {
         result => {
           this.setState({
             isLoaded: true,
-            items: result
+            employees: result
           });
         },
         error => {
@@ -30,7 +30,7 @@ class EmployeeList extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, employees } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -38,8 +38,8 @@ class EmployeeList extends React.Component {
     } else {
       return (
         <ul>
-          {items.map(item => (
-            <li key={item.name}>{item.employee_name}</li>
+          {employees.map(employee => (
+            <li key={employee.name}>{employee.employee_name}</li>
           ))}
         </ul>
       );
